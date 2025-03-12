@@ -3,23 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UX Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Fredrik Storheil - UX Portfolio</title>
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
 
-    <header>
-        <h1>My UX Portfolio</h1>
+    <!-- Skip link for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <div>
+            <h1>Fredrik Storheil</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#case-studies">Case Studies</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="case-studies">
-        <h2>Case Studies</h2>
-        <div id="case-studies-container"></div>
-    </section>
+    <main id="main-content" role="main">
+        <section class="case-studies" id="case-studies">
+            <h2>Case Studies</h2>
+            <div class="case-studies-container"></div>
+        </section>
+    </main>
 
-    <section id="about">
+    <section class="about" id="about" role="complementary">
         <h2>About Me</h2>
-        <div id="about-container"></div>
+        <div class="about-container"></div>
     </section>
 
     <script src="script.js"></script>

@@ -1,0 +1,33 @@
+/* Body Layout */
+body {
+    font-family: var(--font-primary);
+    background-color: var(--background-color);
+}
+
+/* Header Layout */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: var(--padding);
+}
+
+/* Section Layout */
+section {
+    padding: 2rem;
+}
+
+/* Heading Layout */
+h1, h2, h3 {
+    font-family: var(--font-primary);
+    color: inherit;
+}
+
+/* Case Studies Container Layout */
+.case-studies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}

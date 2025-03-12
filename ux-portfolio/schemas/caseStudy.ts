@@ -15,6 +15,16 @@ export default defineType({
       type: 'text',
       title: 'Description',
     },
+    {
+      name: 'overview',
+      type: 'text',
+      title: 'Overview',
+    },
+    {
+      name: 'publishedAt',
+      type: 'datetime',
+      title: 'Published At',
+    },
     // Add more fields as needed
   ],
 });

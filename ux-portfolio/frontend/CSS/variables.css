@@ -1,0 +1,9 @@
+:root {
+    --primary-color: #333;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --text-light: #fff;
+    --font-primary: 'Manrope', sans-serif;
+    --padding: 1rem;
+    --border-radius: 4px;
+}
