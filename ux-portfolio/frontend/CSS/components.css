@@ -1,4 +1,3 @@
-/* Case Study Component */
 .case-study {
     background: white;
     padding: var(--padding);
@@ -9,17 +8,10 @@
 
 .case-study img {
     width: 100%;
-    max-width: 500px;
+    height: 300px;
+    object-fit: cover;
 }
 
-/* Case Studies Container Component */
-.case-studies-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
-}
-
-/* Skip Link Component */
 .skip-link {
     position: absolute;
     top: -100px;
@@ -38,19 +30,16 @@
     outline: 2px solid white;
 }
 
-/* Button and Link Component */
 button, a {
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-/* Remove default link styling */
 a {
     text-decoration: none;
     color: inherit;
 }
 
-/* List Component */
 ul {
     display: flex;
     gap: 1rem;

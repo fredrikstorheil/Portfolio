@@ -2,6 +2,10 @@
 body {
     font-family: var(--font-primary);
     background-color: var(--background-color);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
 }
 
 /* Header Layout */
@@ -9,14 +13,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--primary-color);
-    color: var(--text-light);
     padding: var(--padding);
 }
 
 /* Section Layout */
 section {
-    padding: 2rem;
+    padding: var(--padding);
 }
 
 /* Heading Layout */
@@ -25,9 +27,24 @@ h1, h2, h3 {
     color: inherit;
 }
 
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+
+/*Text layout */
+p {
+    max-width: 60ch;
+}
+
 /* Case Studies Container Layout */
 .case-studies-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
