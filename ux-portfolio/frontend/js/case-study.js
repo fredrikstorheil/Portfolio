@@ -13,9 +13,6 @@ async function fetchCaseStudyDetail() {
         return;
     }
 
-    // Ensure the correct file path
-    const caseStudyPath = "../html/case-study.html";
-
     const query = `*[_type == "caseStudy" && _id == "${caseStudyId}"][0] {
         title,
         summary,
