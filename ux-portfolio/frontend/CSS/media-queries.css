@@ -1,5 +1,10 @@
 /* Media Queries */
 @media (max-width: 768px) {
+
+    body {
+    padding: 0 0.5rem;
+    }
+
     .case-studies-container {
         grid-template-columns: 1fr;
     }
