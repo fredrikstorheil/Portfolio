@@ -66,3 +66,7 @@ ul {
     list-style: none;
     padding: 0;
 }
+
+.prompt{
+    color: var(--text-light);
+}
