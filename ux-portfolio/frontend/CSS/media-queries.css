@@ -8,6 +8,10 @@
     .case-studies-container {
         grid-template-columns: 1fr;
     }
+    
+    .case-study img {
+        height: 200px;
+    }
 
     h1 {
         font-size: 1.25rem;
