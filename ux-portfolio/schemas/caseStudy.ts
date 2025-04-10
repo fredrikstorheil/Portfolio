@@ -8,12 +8,12 @@ export default defineType({
     {
       name: 'title',
       type: 'string',
-      title: 'Title',
+      title: 'Tittel',
     },
     {
       name: 'mainImage',
       type: 'image',
-      title: 'Main Banner Image',
+      title: 'Hovedbilde',
       options: {
         hotspot: true,
       },
@@ -21,49 +21,49 @@ export default defineType({
         {
           name: 'alt',
           type: 'string',
-          title: 'Alternative Text',
+          title: 'Alternativ tekst',
         },
       ],
     },
     {
       name: 'summary',
       type: 'text',
-      title: 'Short Summary',
+      title: 'Kort oppsummering',
     },
     {
       name: 'overview',
       type: 'text',
-      title: 'General Overview',
+      title: 'Generell oversikt',
     },
     {
       name: 'companySummary',
       type: 'text',
-      title: 'Company Summary',
+      title: 'Bedriftssammendrag',
     },
     {
       name: 'challenge',
       type: 'text',
-      title: 'The Challenge',
+      title: 'Utfordringen',
     },
     {
       name: 'contribution',
       type: 'text',
-      title: 'My Contribution',
+      title: 'Mitt bidrag',
     },
     {
       name: 'userResearch',
       type: 'text',
-      title: 'User Research',
+      title: 'Brukerforskning',
     },
     {
       name: 'process',
       type: 'text',
-      title: 'Process',
+      title: 'Prosess',
     },
     {
       name: 'processImages',
       type: 'array',
-      title: 'Process Image Gallery',
+      title: 'Prosessbildegalleri',
       of: [
         {
           type: 'image',
@@ -71,7 +71,7 @@ export default defineType({
             {
               name: 'alt',
               type: 'string',
-              title: 'Alternative Text',
+              title: 'Alternativ Tekst',
             },
           ],
         },
@@ -80,12 +80,12 @@ export default defineType({
     {
       name: 'resultsGrowth',
       type: 'text',
-      title: 'Results & Growth',
+      title: 'Resultater og vekst',
     },
     {
       name: 'publishedAt',
       type: 'datetime',
-      title: 'Published Date',
+      title: 'Publisert dato',
     },
   ],
 });
