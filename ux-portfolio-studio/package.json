@@ -1,8 +1,7 @@
 {
-  "name": "ux-portfolio",
+  "name": "ux-portfolio-studio",
   "private": true,
   "version": "1.0.0",
-  "main": "package.json",
   "license": "UNLICENSED",
   "scripts": {
     "dev": "sanity dev",
@@ -11,9 +10,7 @@
     "deploy": "sanity deploy",
     "deploy-graphql": "sanity graphql deploy"
   },
-  "keywords": [
-    "sanity"
-  ],
+  "keywords": ["sanity"],
   "dependencies": {
     "@sanity/structure": "^2.36.2",
     "@sanity/vision": "^3.83.0",

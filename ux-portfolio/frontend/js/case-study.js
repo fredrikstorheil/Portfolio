@@ -39,18 +39,18 @@ async function fetchCaseStudyDetail() {
         container.innerHTML = `
             <h2>${caseStudy.title}</h2>
             ${caseStudy.mainImage ? `<img class="banner-image" src="${caseStudy.mainImage.asset.url}" alt="${caseStudy.title}">` : ""}
-            <p><strong>Short Summary:</strong> ${caseStudy.summary ?? "No summary available."}</p>
-            <p><strong>General Overview:</strong> ${caseStudy.overview ?? "No overview available."}</p>
-            <p><strong>Company Summary:</strong> ${caseStudy.companySummary ?? "No company summary available."}</p>
-            <p><strong>The Challenge:</strong> ${caseStudy.challenge ?? "No challenge information available."}</p>
-            <p><strong>My Contribution:</strong> ${caseStudy.contribution ?? "No contribution details available."}</p>
-            <p><strong>User Research:</strong> ${caseStudy.userResearch ?? "No user research available."}</p>
-            <p><strong>Process:</strong> ${caseStudy.process ?? "No process details available."}</p>
+            <p><strong>Kort oppsummering:</strong> ${caseStudy.summary ?? "No summary available."}</p>
+            <p><strong>Generell oversikt:</strong> ${caseStudy.overview ?? "No overview available."}</p>
+            <p><strong>Bedriftssammendrag:</strong> ${caseStudy.companySummary ?? "No company summary available."}</p>
+            <p><strong>Utfordringen:</strong> ${caseStudy.challenge ?? "No challenge information available."}</p>
+            <p><strong>Mitt bidrag:</strong> ${caseStudy.contribution ?? "No contribution details available."}</p>
+            <p><strong>Brukerinnsikt:</strong> ${caseStudy.userResearch ?? "No user research available."}</p>
+            <p><strong>Prosess:</strong> ${caseStudy.process ?? "No process details available."}</p>
             <div class="process-gallery">
                 ${caseStudy.processImages ? caseStudy.processImages.map(img => `<img src="${img.asset.url}" alt="Process Image">`).join('') : ""}
             </div>
-            <p><strong>Results & Growth:</strong> ${caseStudy.resultsGrowth ?? "No results information available."}</p>
-            <p><strong>Date:</strong> ${caseStudy.publishedAt ? new Date(caseStudy.publishedAt).toLocaleDateString() : new Date(caseStudy._createdAt).toLocaleDateString()}</p>
+            <p><strong>Resultater og vekst:</strong> ${caseStudy.resultsGrowth ?? "No results information available."}</p>
+            <p><strong>Dato:</strong> ${caseStudy.publishedAt ? new Date(caseStudy.publishedAt).toLocaleDateString() : new Date(caseStudy._createdAt).toLocaleDateString()}</p>
         `;
     } catch (error) {
         console.error("Error fetching case study:", error);
