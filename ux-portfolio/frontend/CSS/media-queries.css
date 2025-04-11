@@ -5,6 +5,10 @@
     padding: 0 0.5rem;
     }
 
+    .page-container {
+        padding: 0;
+    }
+
     .case-studies-container {
         grid-template-columns: 1fr;
     }
