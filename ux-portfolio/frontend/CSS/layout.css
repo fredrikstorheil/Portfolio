@@ -71,7 +71,6 @@ p {
     margin: 2rem 0;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;     /* Firefox */
-    justify-content: center;
 }
 
 .process-gallery img {
@@ -79,26 +78,23 @@ p {
     height: auto;
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-left: 0;
     margin-right: 0;
 }
 
 .process-image {
     width: 100%;     
-    min-width: 100%;
-    height: auto;     
+    flex: 0 0 100%;
     object-fit: cover;
-    flex-shrink: 0;   
     border-radius: 8px;
     scroll-snap-align: center;
-    margin: 0 auto;
+    margin: 0;
 }
   
 .gallery-wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     overflow: hidden;
     gap: 0;
     position: relative;
