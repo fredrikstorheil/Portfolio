@@ -22,6 +22,14 @@
 
     <script src="./ux-portfolio/frontend/js/utils.js"></script>
     <script src="./ux-portfolio/frontend/js/case-study.js"></script>
+    <script>
+        if (!caseStudy.processImages || caseStudy.processImages.length === 0) {
+            const galleryWrapper = document.querySelector(".gallery-wrapper");
+            if (galleryWrapper) {
+                galleryWrapper.style.display = "none";
+            }
+        }
+    </script>
 </div>
 </body>
 </html>

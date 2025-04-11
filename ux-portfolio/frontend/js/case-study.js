@@ -59,8 +59,15 @@ async function fetchCaseStudyDetail() {
             <p><strong>Brukerinnsikt:</strong> ${caseStudy.userResearch ?? "No user research available."}</p>
             <p><strong>Prosess:</strong> ${caseStudy.process ?? "No process details available."}</p>
             <p><strong>Resultater og vekst:</strong> ${caseStudy.resultsGrowth ?? "No results information available."}</p>
-    
         `;
+
+        if (!caseStudy.processImages || caseStudy.processImages.length === 0) {
+            const galleryWrapper = document.querySelector(".gallery-wrapper");
+            if (galleryWrapper) {
+                galleryWrapper.style.display = "none";
+            }
+        }
+        
         if (caseStudy.processImages && caseStudy.processImages.length > 0) {
             const gallery = document.querySelector(".process-gallery");
             const images = gallery.querySelectorAll(".process-image");
