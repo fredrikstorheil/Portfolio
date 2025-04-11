@@ -1,5 +1,5 @@
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 578px) {
 
     body {
     padding: 0 0.5rem;
@@ -7,6 +7,56 @@
 
     .page-container {
         padding: 0;
+    }
+
+    .case-studies-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .case-study img {
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 680px) {
+
+    body {
+    padding: 0 0.5rem;
+    }
+
+    .case-studies-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .case-study img {
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 784px) {
+
+    body {
+    padding: 0 1rem;
     }
 
     .case-studies-container {

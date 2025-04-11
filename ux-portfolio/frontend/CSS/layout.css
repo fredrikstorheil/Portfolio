@@ -2,6 +2,7 @@
 body {
     font-family: var(--font-primary);
     background-color: var(--background-color);
+    color: var(--text-color);
     margin-left: auto;
     margin-right: auto;
     padding: 0 1rem;
@@ -12,7 +13,7 @@ body {
     margin: 0 auto;
     padding: 2rem;
     text-align: left;
-  }
+}
 
 /* Header Layout */
 header {
@@ -30,24 +31,30 @@ section {
 /* Heading Layout */
 h1, h2, h3 {
     font-family: var(--font-primary);
-    color: inherit;
 }
 
 h1 {
     font-size: 2.5rem;
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
 }
+
+#header-title {
+    padding-bottom: 0;
+}
+
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
 }
 h3 {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
+    margin-bottom: 0.25rem;
 }
 
 /*Text layout */
 p {
-    max-width: 60ch;
     font-size:1rem;
+    margin-bottom: 1rem;
 }
 
 /* Case Studies Container Layout */
@@ -55,4 +62,73 @@ p {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+}
+
+.process-gallery {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    margin: 2rem 0;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+    justify-content: center;
+}
+
+.process-gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.process-image {
+    width: 100%;     
+    min-width: 100%;
+    height: auto;     
+    object-fit: cover;
+    flex-shrink: 0;   
+    border-radius: 8px;
+    scroll-snap-align: center;
+    margin: 0 auto;
+}
+  
+.gallery-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    gap: 0;
+    position: relative;
+}
+  
+.gallery-wrapper button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.gallery-wrapper .prev-btn {
+    left: 0;
+}
+
+.gallery-wrapper .next-btn {
+    right: 0;
+}
+  
+button.prev-btn,
+button.next-btn {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+}
+  
+button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
 }

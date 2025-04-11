@@ -31,6 +31,23 @@ export default defineType({
       title: 'Kort oppsummering',
     },
     {
+      name: 'processImages',
+      type: 'array',
+      title: 'Prosessbildegalleri',
+      of: [
+        {
+          type: 'image',
+          fields: [
+            {
+              name: 'alt',
+              type: 'string',
+              title: 'Alternativ Tekst',
+            },
+          ],
+        },
+      ],
+    },
+    {
       name: 'overview',
       type: 'text',
       title: 'Generell oversikt',
@@ -59,23 +76,6 @@ export default defineType({
       name: 'process',
       type: 'text',
       title: 'Prosess',
-    },
-    {
-      name: 'processImages',
-      type: 'array',
-      title: 'Prosessbildegalleri',
-      of: [
-        {
-          type: 'image',
-          fields: [
-            {
-              name: 'alt',
-              type: 'string',
-              title: 'Alternativ Tekst',
-            },
-          ],
-        },
-      ],
     },
     {
       name: 'resultsGrowth',
