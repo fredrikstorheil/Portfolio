@@ -15,9 +15,8 @@
 .case-study {
     background: white;
     padding: var(--padding);
-    margin-bottom: 1rem;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: var(--border-radius);
+    border-radius: 16px;
 }
 
 .case-study img {
@@ -57,6 +56,21 @@
 button, a {
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+.back-button{
+    background: var(--primary-color);
+    color: var(--background-color);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.back-button:hover{
+    background: var(--brand-color);
+    color: var(--primary-color);
 }
 
 a {
