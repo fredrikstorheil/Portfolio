@@ -126,3 +126,28 @@ p {
     max-height: 90vh;
     object-fit: contain;
 }
+
+.lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    user-select: none;
+}
+
+.lightbox-arrow.left {
+    left: 20px;
+}
+
+.lightbox-arrow.right {
+    right: 20px;
+}
+
+.lightbox-arrow:hover {
+    color: #ccc;
+}

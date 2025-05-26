@@ -81,13 +81,54 @@ async function fetchCaseStudyDetail() {
     }
 }
 
+// Variables to keep track of lightbox state and images
+let currentLightboxIndex = 0;
+let lightboxImages = [];
+
 function openLightbox(img) {
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
+    // Get all process images in array
+    lightboxImages = Array.from(document.querySelectorAll(".process-image"));
+    // Set current index for navigation
+    currentLightboxIndex = lightboxImages.indexOf(img);
     lightboxImg.src = img.src;
     lightbox.style.display = "flex";
+
+    // Add keyboard navigation listener
+    document.addEventListener("keydown", handleLightboxKey);
+}
+
+function handleLightboxKey(event) {
+    const lightboxImg = document.getElementById("lightbox-img");
+    if (event.key === "ArrowRight") {
+        // Move to next image if possible
+        if (currentLightboxIndex < lightboxImages.length - 1) {
+            currentLightboxIndex++;
+            lightboxImg.src = lightboxImages[currentLightboxIndex].src;
+        }
+    } else if (event.key === "ArrowLeft") {
+        // Move to previous image if possible
+        if (currentLightboxIndex > 0) {
+            currentLightboxIndex--;
+            lightboxImg.src = lightboxImages[currentLightboxIndex].src;
+        }
+    } else if (event.key === "Escape") {
+        closeLightbox();
+    }
 }
 
 function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
+    // Remove keyboard navigation listener
+    document.removeEventListener("keydown", handleLightboxKey);
+}
+
+function navigateLightbox(direction) {
+    const lightboxImg = document.getElementById("lightbox-img");
+    const newIndex = currentLightboxIndex + direction;
+    if (newIndex >= 0 && newIndex < lightboxImages.length) {
+        currentLightboxIndex = newIndex;
+        lightboxImg.src = lightboxImages[currentLightboxIndex].src;
+    }
 }
