@@ -125,6 +125,7 @@ p {
     max-width: 90vw;
     max-height: 90vh;
     object-fit: contain;
+    border-radius: 8px;
 }
 
 .lightbox-arrow {
@@ -138,6 +139,9 @@ p {
     cursor: pointer;
     z-index: 1001;
     user-select: none;
+    padding: 0.5rem 1rem; /* Add padding to increase hitbox */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: improve visibility */
+    border-radius: 8px; /* Optional: better visual feedback */
 }
 
 .lightbox-arrow.left {

@@ -63,6 +63,7 @@ async function fetchCaseStudyDetail() {
         galleryImages.forEach(img => {
             img.addEventListener("click", () => openLightbox(img));
         });
+        enableArrowScrollInGallery();
 
         if (!caseStudy.processImages || caseStudy.processImages.length === 0) {
             const galleryWrapper = document.querySelector(".gallery-wrapper");
@@ -131,4 +132,22 @@ function navigateLightbox(direction) {
         currentLightboxIndex = newIndex;
         lightboxImg.src = lightboxImages[currentLightboxIndex].src;
     }
+}
+
+function enableArrowScrollInGallery() {
+    const gallery = document.querySelector(".process-gallery");
+    if (!gallery) return;
+
+    document.addEventListener("keydown", function (e) {
+        // Skip if lightbox is open
+        if (document.getElementById("lightbox").style.display === "flex") return;
+
+        const scrollAmount = gallery.querySelector(".process-image")?.offsetWidth || 200;
+
+        if (e.key === "ArrowRight") {
+            gallery.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        } else if (e.key === "ArrowLeft") {
+            gallery.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        }
+    });
 }
