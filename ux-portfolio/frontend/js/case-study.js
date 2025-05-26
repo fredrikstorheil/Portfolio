@@ -59,6 +59,11 @@ async function fetchCaseStudyDetail() {
             <p><strong>Resultater og vekst:</strong> ${caseStudy.resultsGrowth ?? "No results information available."}</p>
         `;
 
+        const galleryImages = document.querySelectorAll(".process-image");
+        galleryImages.forEach(img => {
+            img.addEventListener("click", () => openLightbox(img));
+        });
+
         if (!caseStudy.processImages || caseStudy.processImages.length === 0) {
             const galleryWrapper = document.querySelector(".gallery-wrapper");
             if (galleryWrapper) {
@@ -74,4 +79,15 @@ async function fetchCaseStudyDetail() {
         console.error("Error fetching case study:", error);
         container.innerHTML = "<p>Failed to load case study.</p>";
     }
+}
+
+function openLightbox(img) {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    lightboxImg.src = img.src;
+    lightbox.style.display = "flex";
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
 }
