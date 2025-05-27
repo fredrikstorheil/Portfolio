@@ -32,6 +32,7 @@ async function fetchCaseStudyDetail() {
     try {
         const caseStudy = await fetchSanityData(query);
         document.getElementById("case-title-header").textContent = caseStudy.title ?? "Uten tittel";
+        document.title = caseStudy.title ?? "Case Study";
         if (!caseStudy) {
             container.innerHTML = "<p>Failed to load case study.</p>";
             return;
