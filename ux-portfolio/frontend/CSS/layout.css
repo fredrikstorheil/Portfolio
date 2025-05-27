@@ -1,3 +1,21 @@
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 0.75rem 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.lightbox-close:hover {
+    color: #ccc;
+}
 /* Body Layout */
 body {
     font-family: var(--font-primary);
@@ -105,6 +123,12 @@ p {
     border-radius: 8px;
     flex-shrink: 0;
     scroll-snap-align: center;
+    cursor: zoom-in;
+    transition: transform 0.2s ease;
+}
+
+.process-image:hover {
+    transform: scale(1.02);
 }
 
 .lightbox {
@@ -154,4 +178,36 @@ p {
 
 .lightbox-arrow:hover {
     color: #ccc;
+}
+
+.gallery-instruction {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--text-color-secondary, #555);
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.tldr-box {
+    position: relative;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    padding: var(--padding);
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    font-family: var(--font-primary);
+    overflow: hidden;
+}
+
+.tldr-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background-color: var(--brand-color);
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
 }

@@ -39,8 +39,10 @@ async function fetchCaseStudyDetail() {
 
         container.innerHTML = `
             ${caseStudy.mainImage ? `<img class="banner-image" src="${caseStudy.mainImage.asset.url}" alt="${caseStudy.title}">` : ""}
-            <p><strong>Kort oppsummering:</strong> ${caseStudy.summary ?? "No summary available."}</p>
-
+            <div class="tldr-box">
+                <p><strong>Kort oppsummering:</strong> ${caseStudy.summary ?? "No summary available."}</p>
+            </div>
+            <p class="gallery-instruction">Klikk på et bilde for å forstørre og navigere mellom dem</p>
             <div class="gallery-wrapper">
                 <div class="process-gallery">
                     ${caseStudy.processImages
